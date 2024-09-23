@@ -9,7 +9,7 @@ METRIC_NAME="iptables_line_count"
 mkdir -p "$OUTPUT_DIR"
 
 # Full path to iptables using which command
-IPTABLES_CMD=$(which iptables)
+IPTABLES_CMD="/usr/sbin/iptables"
 
 # Count the number of lines in iptables output
 line_count=$("$IPTABLES_CMD" -L | wc -l)
